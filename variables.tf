@@ -15,7 +15,7 @@ variable "volume_type" {
 
 variable "my_key_name" {   
   type = "string"           
-  default = "dimbu_terraform"
+  default = "dimbuTerraform-ADOP"
 }      
 
 variable "NtpRegion" {

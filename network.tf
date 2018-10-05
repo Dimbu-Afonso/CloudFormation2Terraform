@@ -1,14 +1,14 @@
-resource "aws_subnet" "dimbuSubnet" {
+resource "aws_subnet" "dimbuADOPTerraform-Subnet" {
   vpc_id     = "${var.aws_vpc}"
   cidr_block = "172.31.64.16/28"
   map_public_ip_on_launch = true
 
   tags {
-    Name = "dimbuSubnet"
+    Name = "dimbuTerraformSubnet"
   }
 }
 
-resource "aws_security_group" "dimbuADOPsecurityGroup" {
+resource "aws_security_group" "dimbuADOPTerraform-securityGroup" {
   name        = "dimbuADOPsecurityGroup"
   description = "Allow ADOP inbound traffic"
   vpc_id      = "${var.aws_vpc}"

@@ -1,8 +1,8 @@
-resource "aws_instance" "dimbuADOPterraform" {
+resource "aws_instance" "dimbuterraform-ADOP" {
   ami = "ami-7abd0209"
   instance_type = "m4.xlarge"
-  vpc_security_group_ids = ["${aws_security_group.dimbuADOPsecurityGroup.id}"]
-  subnet_id = "${aws_subnet.dimbuSubnet.id}"
+  vpc_security_group_ids = ["${aws_security_group.dimbuADOPTerraform-securityGroup.id}"]
+  subnet_id = "${aws_subnet.dimbuADOPTerraform-Subnet.id}"
   key_name = "${aws_key_pair.ssh_key.key_name}"
   user_data = "${data.template_cloudinit_config.master.rendered}"
   # user_data = "${data.template_file.user_data.rendered}"
