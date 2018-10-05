@@ -46,5 +46,5 @@ resource "aws_key_pair" "ssh_key" {
 }
 
 data "template_file" "user_data" {
-  template = "${file("user_data.tpl")}"
+  template = "${file("user_data.sh")}"
 }
